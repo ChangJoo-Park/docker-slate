@@ -1,0 +1,10 @@
+version: "3"
+services:
+  slate:
+    build: .
+    command: ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
+    restart: always
+    ports:
+     - "4567:4567"
+    volumes:
+      - ./slate:/app
